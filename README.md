@@ -71,7 +71,7 @@ SCHEMA=projet
 
 ## :arrow_forward: Lancer les tests unitaires
 
-* `python -m unittest`
+* `pytest -v`
 * Couverture de tests avec [Coverage](https://coverage.readthedocs.io/en/7.4.0/index.html)
   * le fichier `.coveragerc` permet de modifier le paramétrage
   * `coverage run -m pytest`
