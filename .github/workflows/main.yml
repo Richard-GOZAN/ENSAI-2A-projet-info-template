@@ -24,7 +24,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install pylint
         pip install -r requirements.txt
-    - name: Test Service class with unittest
+    - name: Unit Tests with pytest
       run: |
         python -m unittest -k test_service
     - name: Analysing the code with pylint

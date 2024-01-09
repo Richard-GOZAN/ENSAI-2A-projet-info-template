@@ -53,6 +53,9 @@ pip list
 
 :construction: À la racine du projet le fichier , créer un fichier nommé `.env` qui contient les variables d'environnement :
 
+* du webservice appelé
+* pour se connecter à la base de données
+
 ```
 HOST_WEBSERVICE=https://pokeapi.co/api/v2
 
@@ -71,7 +74,7 @@ SCHEMA=projet
 * `python -m unittest`
 * Couverture de tests avec [Coverage](https://coverage.readthedocs.io/en/7.4.0/index.html)
   * le fichier `.coveragerc` permet de modifier le paramétrage
-  * `coverage run -m unittest discover`
+  * `coverage run -m pytest`
   * `coverage html`
   * Ouvrir le fichier coverage_report/index.html
 
