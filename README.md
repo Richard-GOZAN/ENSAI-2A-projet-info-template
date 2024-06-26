@@ -56,12 +56,12 @@ pip list
 ```
 HOST_WEBSERVICE=https://pokeapi.co/api/v2
 
-HOST=sgbd-eleves.domensai.ecole
-PORT=5432
-DATABASE=idxxxx
-USER=idxxxx
-PASSWORD=idxxxx
-SCHEMA=projet
+POSTGRES_HOST=sgbd-eleves.domensai.ecole
+POSTGRES_PORT=5432
+POSTGRES_DATABASE=idxxxx
+POSTGRES_USER=idxxxx
+POSTGRES_PASSWORD=idxxxx
+POSTGRES_SCHEMA=projet
 ```
 
 ---

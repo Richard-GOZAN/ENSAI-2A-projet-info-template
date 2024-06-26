@@ -23,7 +23,7 @@ jobs:
           --health-timeout=5s
           --health-retries=5
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v3
@@ -46,12 +46,12 @@ jobs:
     - name: Create .env file
       run: |
         echo "HOST_WEBSERVICE=https://pokeapi.co/api/v2" > .env
-        echo "HOST=localhost" >> .env
-        echo "PORT=5432" >> .env
-        echo "DATABASE=test_db" >> .env
-        echo "USER=postgre_user" >> .env
-        echo "PASSWORD=postgre_pwd" >> .env
-        echo "SCHEMA=projet" >> .env
+        echo "POSTGRES_HOST=localhost" >> .env
+        echo "POSTGRES_PORT=5432" >> .env
+        echo "POSTGRES_DATABASE=test_db" >> .env
+        echo "POSTGRES_USER=postgre_user" >> .env
+        echo "POSTGRES_PASSWORD=postgre_pwd" >> .env
+        echo "POSTGRES_SCHEMA=projet" >> .env
 
     - name: Wait for PostgreSQL
       run: |

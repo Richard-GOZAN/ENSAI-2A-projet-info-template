@@ -19,19 +19,19 @@ class ResetDatabase(metaclass=Singleton):
     @log
     def lancer(self, test_dao=False):
         if test_dao:
-            mock.patch.dict(os.environ, {"SCHEMA": "projet_test_dao"}).start()
+            mock.patch.dict(os.environ, {"POSTGRES_SCHEMA": "projet_test_dao"}).start()
             pop_data_path = "data/pop_db_test.sql"
         else:
             pop_data_path = "data/pop_db.sql"
 
         dotenv.load_dotenv()
 
-        print(os.environ["HOST"])
-        print(os.environ["DATABASE"])
-        print(os.environ["USER"])
-        print(os.environ["PASSWORD"])
+        print(os.environ["POSTGRES_HOST"])
+        print(os.environ["POSTGRES_DATABASE"])
+        print(os.environ["POSTGRES_USER"])
+        print(os.environ["POSTGRES_PASSWORD"])
 
-        schema = os.environ["SCHEMA"]
+        schema = os.environ["POSTGRES_SCHEMA"]
 
         create_schema = (
             f"DROP SCHEMA IF EXISTS {schema} CASCADE; CREATE SCHEMA {schema};"
