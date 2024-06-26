@@ -60,11 +60,12 @@ jobs:
           sleep 1
         done
 
-    - name: Populate PostgreSQL database
+    - name: Initialize and Populate PostgreSQL database
       run: |
-        psql postgresql://postgre_user:postgre_pwd@localhost:5432/test_db -f data/pop_db.sql
+        psql postgresql://user:password@localhost:5432/test_db -f data/init_db.sql
+        psql postgresql://user:password@localhost:5432/test_db -f data/pop_db_test.sql
 
-    - name: Test Service class with unittest
+    - name: Unit Tests with pytest
       run: |
         pytest
 
