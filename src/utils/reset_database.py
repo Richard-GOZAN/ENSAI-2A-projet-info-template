@@ -26,6 +26,11 @@ class ResetDatabase(metaclass=Singleton):
 
         dotenv.load_dotenv()
 
+        print(os.environ["HOST"])
+        print(os.environ["DATABASE"])
+        print(os.environ["USER"])
+        print(os.environ["PASSWORD"])
+
         schema = os.environ["SCHEMA"]
 
         create_schema = (
