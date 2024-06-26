@@ -53,7 +53,7 @@ pip list
 
 :construction: À la racine du projet le fichier , créer un fichier nommé `.env` qui contient les variables d'environnement :
 
-```
+```default
 HOST_WEBSERVICE=https://pokeapi.co/api/v2
 
 POSTGRES_HOST=sgbd-eleves.domensai.ecole
